@@ -68,6 +68,23 @@ dd.error(function(err) {
 });
 
 // 监听表单提交事件
+document.getElementById('add-mac-input').addEventListener('click', function() {
+    // 获取容器和当前已有的输入框数量
+    var container = document.getElementById('mac-inputs-container');
+    var inputGroups = container.querySelectorAll('.input-group');
+    var newIndex = inputGroups.length + 1;
+
+    // 创建新的输入组
+    var newGroup = document.createElement('div');
+    newGroup.className = 'input-group mb-2';
+    newGroup.innerHTML = `
+        <input type="text" class="form-control form-control-lg" name="mac-address-${newIndex}" required>
+    `;
+    // 在提示文字前插入新输入框
+    var formText = container.querySelector('.form-text');
+    container.insertBefore(newGroup, formText);
+});
+
 document.getElementById('mac-form').addEventListener('submit', function(event) {
     event.preventDefault(); // 阻止表单的默认提交行为
 

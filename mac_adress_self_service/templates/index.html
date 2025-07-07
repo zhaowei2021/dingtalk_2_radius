@@ -29,8 +29,11 @@
             <div class="col-12 col-md-8 col-lg-6">
                 <h6 class="mb-3">请输入您的Mac地址：</h6>
                 <form id="mac-form">
-                    <div class="mb-3">
-                        <input type="text" class="form-control form-control-lg" id="mac-address" name="mac-address" required>
+                    <div class="mb-3" id="mac-inputs-container">
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control form-control-lg" id="mac-address" name="mac-address" required>
+                            <button type="button" class="btn btn-success" id="add-mac-input">+</button>
+                        </div>
                         <!-- 添加红色提示文字 -->
                         <div class="form-text text-danger">
                             Mac地址支持以下格式：</br>1A-2D-3E-4C-5F-6A</br>1a-2d-3e-4c-5f-6a</br>
