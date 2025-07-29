@@ -19,7 +19,7 @@ CORS(app)  # 允许跨域请求
 APP_KEY = ''
 APP_SECRET = ''
 CORP_ID = ''
-AGENT_ID = ''  # 请替换为您的AgentId
+AGENT_ID = '1233211234567'  # 请替换为您的AgentId
 
 # 配置日志
 logging.basicConfig(level=logging.DEBUG)
