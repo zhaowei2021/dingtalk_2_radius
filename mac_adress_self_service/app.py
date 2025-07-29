@@ -36,7 +36,7 @@ jsapi_ticket_cache = {
     'expires_at': 0
 }
 
-def get_access_token(app_key, app_secret):
+def get_access_token(app_key, app_secretssssss):
     """
     获取Access Token，并进行缓存
     """
