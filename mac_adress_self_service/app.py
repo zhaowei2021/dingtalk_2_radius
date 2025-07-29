@@ -16,7 +16,7 @@ app = Flask(__name__)
 CORS(app)  # 允许跨域请求
 
 # 应用凭证和配置信息
-APP_KEY = 'dingvvodptvy5roj7t0v'
+APP_KEY = ''
 APP_SECRET = ''
 CORP_ID = 'ding5508a57fabe2671a35c2f4657eb6378f'
 AGENT_ID = '3264546306'  # 请替换为您的AgentId
