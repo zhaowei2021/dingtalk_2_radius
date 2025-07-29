@@ -18,7 +18,7 @@ CORS(app)  # 允许跨域请求
 # 应用凭证和配置信息
 APP_KEY = ''
 APP_SECRET = ''
-CORP_ID = ''
+CORP_ID = '4461978956161'
 AGENT_ID = '1233211234567'  # 请替换为您的AgentId
 
 # 配置日志
