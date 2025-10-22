@@ -6,6 +6,8 @@
     <title>Mac地址自助登记</title>
     <!-- 引入Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- 引入钉钉JSAPI -->
     <script src="https://g.alicdn.com/dingding/dingtalk-jsapi/2.11.0/dingtalk.open.js"></script>
     <!-- 定义全局变量，将后端变量传递给前端 -->
@@ -32,13 +34,19 @@
                     <div class="mb-3" id="mac-inputs-container">
                         <div class="input-group mb-2">
                             <input type="text" class="form-control form-control-lg" id="mac-address" name="mac-address" required>
+                            <button type="button" class="btn btn-warning" id="format-check-btn" title="检查并修复MAC地址格式">
+                                <i class="fas fa-magic"></i> 格式修复
+                            </button>
                             <button type="button" class="btn btn-success" id="add-mac-input">+</button>
                         </div>
                         <!-- 添加红色提示文字 -->
                         <div class="form-text text-danger">
                             Mac地址支持以下格式：</br>1A-2D-3E-4C-5F-6A</br>1a-2d-3e-4c-5f-6a</br>
-                            1A:2D:3E:4C:4F:6A</br>1a:2d:3e:4c:5f:6a</br>请严格按照上述格式输入！
+                            1A:2D:3E:4C:4F:6A</br>1a:2d:3e:4c:5f:6a</br>或无分隔符格式：1A2D3E4C5F6A</br>
+                            <span class="text-info">💡 点击"格式修复"按钮可自动检查并修复格式错误</span>
                         </div>
+                        <!-- 添加格式检查结果提示区域 -->
+                        <div id="format-check-result" class="mt-2"></div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg w-100">提交</button>
                 </form>
